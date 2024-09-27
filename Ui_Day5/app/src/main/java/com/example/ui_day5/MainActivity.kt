@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Ui_Day5Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
+                    MainScreen()
                 }
             }
         }
@@ -102,7 +102,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 Text(
                     text = "Restorative Hair Mask",
                     textAlign = TextAlign.Center,
-                    color = Color.White,
+                    color = Color.Black,
                     fontSize = 30.sp,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -145,7 +145,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
                     Text(
                         text = "$20.35",
                         textAlign = TextAlign.End,
-                        color = Color.White,
+                        color = Color.Black,
                         fontSize = 25.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier
@@ -156,7 +156,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 }
                 Text(
                     text = stringResource(R.string.descriptionString),
-                    color = Color.White,
+                    color = Color.Black,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.W500,
                     letterSpacing = 2.sp,
@@ -205,7 +205,9 @@ private fun MainScreenPreview() {
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop
             )
-            MainScreen(modifier = Modifier.padding(12.dp).align(Alignment.Center))
+            MainScreen(modifier = Modifier
+                .padding(12.dp)
+                .align(Alignment.Center))
         }
     }
 }

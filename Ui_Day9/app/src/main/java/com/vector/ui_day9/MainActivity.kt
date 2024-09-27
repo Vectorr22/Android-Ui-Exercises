@@ -70,7 +70,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(8.dp)
+                .padding(horizontal = 8.dp, vertical = 16.dp)
         ) {
             DoctorInfo()
             Spacer(modifier = Modifier.height(20.dp))

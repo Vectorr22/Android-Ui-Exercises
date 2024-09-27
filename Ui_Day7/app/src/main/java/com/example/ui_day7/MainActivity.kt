@@ -33,6 +33,7 @@ import androidx.compose.material.icons.rounded.KeyboardArrowRight
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
@@ -70,7 +71,7 @@ class MainActivity : ComponentActivity() {
             Ui_Day7Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     MainScreen(
-                        modifier = Modifier.padding(innerPadding)
+
                     )
                 }
             }
@@ -83,11 +84,13 @@ fun MainScreen(modifier: Modifier = Modifier) {
     var currentSearchText by remember { mutableStateOf("") }
     ElevatedCard(
         modifier = modifier
-            .fillMaxSize()
+            .fillMaxSize(),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF4B527E))
     ) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(vertical = 12.dp)
         ) {
             Column(
                 modifier = Modifier

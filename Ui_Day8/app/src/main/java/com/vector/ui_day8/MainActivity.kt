@@ -48,8 +48,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Ui_Day8Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MainScreen()
+                Scaffold(modifier = Modifier.fillMaxSize(), containerColor = Color(0xFF3C4579)) { innerPadding ->
+                    Box(modifier = Modifier.fillMaxSize()){
+                        MainScreen(modifier = Modifier.align(Alignment.Center))
+                    }
                 }
             }
         }
@@ -58,13 +60,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-
     Card(
         modifier = modifier
             .size(
                 width = 400.dp,
                 height = 300.dp
-            ),
+            )
+            .padding(12.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFF1D1B1B),
             contentColor = Color.White

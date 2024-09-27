@@ -12,12 +12,14 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -40,8 +42,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Ui_Day4Theme {
-                Surface(modifier = Modifier.fillMaxSize()) {
-
+                Scaffold(
+                    containerColor = Color(0xFFE3F2FD)
+                ) { paddingValues ->
+                    Box(modifier = Modifier.fillMaxSize()){
+                        MainScreen(
+                            modifier = Modifier.align(Alignment.Center)
+                        )
+                    }
                 }
             }
         }

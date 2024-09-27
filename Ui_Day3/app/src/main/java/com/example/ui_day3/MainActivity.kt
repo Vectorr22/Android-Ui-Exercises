@@ -106,7 +106,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Ui_Day3Theme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-
+                    MainScreen()
                 }
             }
         }

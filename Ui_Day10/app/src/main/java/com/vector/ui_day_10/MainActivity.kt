@@ -42,6 +42,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -84,7 +85,7 @@ fun MainScreen(
                     colorStops = colors
                 )
             )
-            .padding(16.dp),
+            .padding(horizontal = 16.dp, vertical = 32.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
@@ -119,9 +120,10 @@ fun MainScreen(
                 )
                 withStyle(
                     style = SpanStyle(
-                        color = Color.Blue,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 12.sp
+                        color = Color(0xFF251196),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp,
+                        textDecoration = TextDecoration.Underline
                     )
                 ) {
                     append("Resend code")
