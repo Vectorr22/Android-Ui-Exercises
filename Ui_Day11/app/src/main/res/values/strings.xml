@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ui_Day11</string>
+    <string name="directions">Directions</string>
+    <string name="tickets">Tickets</string>
+    <string name="call">Call</string>
+    <string name="website">Website</string>
+    <string name="like">Like</string>
+</resources>
